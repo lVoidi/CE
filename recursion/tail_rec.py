@@ -84,3 +84,21 @@ def divida_aux(dig, num, menores, mayores, exp_menores, exp_mayores):
             exp_menores + 1,
             exp_mayores,
         )
+
+# Ejercicio 5. Comprobar si todos los digitos de num son divisibles entre dig
+# La magia aquí era hacerlo con recursividad de cola y no con recursividad simple
+def todos_div(num, dig):
+    if isinstance(num, int) and isinstance(dig, int) and 0 <= dig <= 9:
+        return todos_div_aux(num, dig, True)
+    else:
+        return "Error"
+
+def todos_div_aux(num, dig, result):
+    if not num:
+        return result
+    
+    divisible = (num % 10) % dig == 0
+    
+    return todos_div_aux(num//10, dig, result and divisible)
+
+print(todos_div(46148, 2))
