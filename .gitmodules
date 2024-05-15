@@ -1,3 +1,6 @@
 [submodule "projects/CEFootV.4"]
 	path = projects/CEFootV.4
 	url = https://github.com/lVoidi/CEFootV.4.git
+[submodule "projects/Recursive-Bomberman"]
+	path = projects/Recursive-Bomberman
+	url = https://github.com/lVoidi/Recursive-Bomberman.git
